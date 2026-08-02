@@ -1,26 +1,43 @@
 # OutageDeck
 
-**Live status and outage alerts for 109 cloud & SaaS providers — from official sources only.**
+**Is it you, or is it them?** Live status for 172 cloud and SaaS vendors, read from the official status feed each one publishes about itself, about every 10 minutes.
 
-[OutageDeck](https://outagedeck.com) tracks the official status feeds of AWS, Cloudflare, GitHub, OpenAI, Google Cloud, Slack, Twilio, Vercel, and 100+ other providers, normalizes them into one place, and alerts you the moment something breaks — before your customers tell you.
+[![Live status for AWS, Cloudflare, GitHub, OpenAI, Vercel and Google Cloud | OutageDeck](https://outagedeck.com/embed/wall.svg?p=aws,cloudflare,github,openai,vercel,google-cloud)](https://outagedeck.com/stack?p=aws,cloudflare,github,openai,vercel,google-cloud)
 
-- 🔴 **Live dashboard** — [outagedeck.com](https://outagedeck.com)
-- 🔔 **Free outage alerts** — email alerts for up to 5 providers, [set up in 60 seconds](https://outagedeck.com/account)
-- 🧩 **JSON API** — [API reference](https://outagedeck.com/developers/api) with an [OpenAPI 3.1 spec](https://outagedeck.com/api/v1/openapi), CORS-open, anonymous access allowed
-- 📈 **Independent uptime history** — computed from what vendors actually publish, not what they claim
-- 📡 **RSS feeds** — [global](https://outagedeck.com/feeds/incidents.xml) and per-provider
+That wall is not a screenshot. It is the same embed you can drop into your own README, rendering right now from those six vendors' own feeds. Click it for the full board.
 
-## Live status badges for your README
+## What you get
 
-Embed a live SVG badge for any tracked provider:
+- **[Answer "is it us or them" in one click](https://outagedeck.com/stack)** with no account. Pick your vendors, or paste a `package.json` and let it match your dependencies in the browser. Nothing is uploaded, and the result is a shareable link.
+- **[Free outage alerts](https://outagedeck.com/account)** on email for up to 5 providers, no card. Paid plans add Slack, Teams, Discord, and your own webhook, across your whole stack.
+- **[A JSON API](https://outagedeck.com/developers/api)** with an [OpenAPI 3.1 spec](https://outagedeck.com/api/v1/openapi), open CORS, and anonymous access allowed.
+- **[An MCP server](https://outagedeck.com/developers/mcp)** so a coding agent checks whether the cloud is down before it starts rewriting your code. Works in ChatGPT, Claude, Cursor, VS Code, and any MCP client, with no install and no key. Listed in the [official MCP registry](https://registry.modelcontextprotocol.io) as `com.outagedeck/outagedeck-status`.
+- **[Independent uptime history](https://outagedeck.com/providers)** computed from what vendors actually published, kept linkable after the banner comes down.
+- **[RSS feeds](https://outagedeck.com/feeds/incidents.xml)**, global and per provider.
 
-![AWS status](https://outagedeck.com/api/v1/badges/aws) ![GitHub status](https://outagedeck.com/api/v1/badges/github) ![Cloudflare status](https://outagedeck.com/api/v1/badges/cloudflare)
+## Put a live status wall in your README
+
+Pick your vendors on the [embed builder](https://outagedeck.com/embed) and copy the snippet. It is an image inside a link, so it works in a README where iframes and scripts are stripped.
 
 ```markdown
-![AWS status](https://outagedeck.com/api/v1/badges/aws)
+[![Live status for your stack | OutageDeck](https://outagedeck.com/embed/wall.svg?p=aws,cloudflare,github)](https://outagedeck.com/stack?p=aws,cloudflare,github)
 ```
 
-Swap `aws` for any of the [109 tracked providers](https://outagedeck.com/providers).
+Add `&theme=light` or `&theme=dark` to pin the theme. Without it the wall follows the reader's own.
+
+## Or a single provider badge
+
+[![Live status for AWS | OutageDeck](https://outagedeck.com/api/v1/badges/aws)](https://outagedeck.com/providers/aws) [![Live status for GitHub | OutageDeck](https://outagedeck.com/api/v1/badges/github)](https://outagedeck.com/providers/github) [![Live status for Cloudflare | OutageDeck](https://outagedeck.com/api/v1/badges/cloudflare)](https://outagedeck.com/providers/cloudflare) [![Live status for OpenAI | OutageDeck](https://outagedeck.com/api/v1/badges/openai)](https://outagedeck.com/providers/openai)
+
+```markdown
+[![Live status for AWS | OutageDeck](https://outagedeck.com/api/v1/badges/aws)](https://outagedeck.com/providers/aws)
+```
+
+Swap `aws` for any of the [172 tracked providers](https://outagedeck.com/providers). Badges are deliberately outside auth and rate limiting, so they can be hotlinked freely.
+
+## What we do not claim
+
+We read what vendors publish. We do not probe them, so **we are never earlier than a vendor's own status page**, and anyone who needs detection before the vendor admits it needs synthetic monitoring instead. That constraint is the point: nothing here is crowd-reported or guessed, so there are no false positives. The reasoning behind every number is on [our methodology page](https://outagedeck.com/methodology), and OutageDeck publishes [its own status](https://outagedeck.com/status) in the same vocabulary it uses for everyone else.
 
 ---
 
