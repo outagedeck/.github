@@ -10,6 +10,7 @@ That wall is not a screenshot. It is the same embed you can drop into your own R
 
 - **[Answer "is it us or them" in one click](https://outagedeck.com/stack)** with no account. Pick your vendors, or paste a `package.json` and let it match your dependencies in the browser. Nothing is uploaded, and the result is a shareable link.
 - **[Free outage alerts](https://outagedeck.com/account)** on email for up to 5 providers, no card. Paid plans add Slack, Teams, Discord, and your own webhook, across your whole stack.
+- **[A GitHub Action](https://github.com/outagedeck/status-check)** that checks AWS, Cloudflare, GitHub, OpenAI, and the rest of your vendor stack before a deployment proceeds. Add `uses: outagedeck/status-check@v1`; public checks are free and keyless.
 - **[A JSON API](https://outagedeck.com/developers/api)** with an [OpenAPI 3.1 spec](https://outagedeck.com/api/v1/openapi), open CORS, and anonymous access allowed.
 - **[An MCP server](https://outagedeck.com/developers/mcp)** so a coding agent checks whether the cloud is down before it starts rewriting your code. Works in ChatGPT, Claude, Cursor, VS Code, and any MCP client, with no install and no key. Listed in the [official MCP registry](https://registry.modelcontextprotocol.io) as `com.outagedeck/outagedeck-status`.
 - **[Independent uptime history](https://outagedeck.com/providers)** computed from what vendors actually published, kept linkable after the banner comes down.
