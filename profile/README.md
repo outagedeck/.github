@@ -9,7 +9,7 @@ That wall is not a screenshot. It is the same embed you can drop into your own R
 ## What you get
 
 - **[Answer "is it us or them" in one click](https://outagedeck.com/stack)** with no account. Pick your vendors, or paste a `package.json` and let it match your dependencies in the browser. Nothing is uploaded, and the result is a shareable link.
-- **[Free outage alerts](https://outagedeck.com/account)** on email for up to 5 providers, no card. Paid plans add Slack, Teams, Discord, and your own webhook, across your whole stack.
+- **[Free outage alerts](https://outagedeck.com/alerts?utm_source=github&utm_medium=org_profile&utm_campaign=github_org_profile_alerts)** on email for up to 5 providers, no card. Paid plans add Slack, Teams, Discord, and your own webhook, across your whole stack.
 - **[A GitHub Action](https://github.com/outagedeck/status-check)** that checks AWS, Cloudflare, GitHub, OpenAI, and the rest of your vendor stack before a deployment proceeds. Add `uses: outagedeck/status-check@v1`; public checks are free and keyless.
 - **[A cross-platform CLI](https://github.com/outagedeck/cli)** for status checks in a terminal or any CI system, with JSON output and configurable failure thresholds. Install it with Homebrew, [MacPorts](https://ports.macports.org/port/outagedeck/), Scoop, Nix, mise, or `go install`.
 - **[A native GitHub CLI extension](https://github.com/outagedeck/gh-outagedeck)** that checks GitHub, GitHub Actions, the GitHub API, and GitHub Web before you debug a repository or workflow. Install it with `gh extension install outagedeck/gh-outagedeck`; add other provider slugs to check the rest of a dependency stack.
