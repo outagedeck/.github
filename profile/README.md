@@ -13,6 +13,7 @@ That wall is not a screenshot. It is the same embed you can drop into your own R
 - **[A GitHub Action](https://github.com/outagedeck/status-check)** that checks AWS, Cloudflare, GitHub, OpenAI, and the rest of your vendor stack before a deployment proceeds. Add `uses: outagedeck/status-check@v1`; public checks are free and keyless.
 - **[A cross-platform CLI](https://github.com/outagedeck/cli)** for status checks in a terminal or any CI system, with JSON output and configurable failure thresholds. Install it with Homebrew, [MacPorts](https://ports.macports.org/port/outagedeck/), Scoop, Nix, mise, or `go install`, or add `ghcr.io/devcontainers-extra/features/outagedeck:1` to a [Dev Container or Codespace](https://github.com/devcontainers-extra/features/tree/main/src/outagedeck).
 - **[A native GitHub CLI extension](https://github.com/outagedeck/gh-outagedeck)** that checks GitHub, GitHub Actions, the GitHub API, and GitHub Web before you debug a repository or workflow. Install it with `gh extension install outagedeck/gh-outagedeck`; add other provider slugs to check the rest of a dependency stack.
+- **[A ready-to-import Open WebUI tool](https://github.com/Haervwe/open-webui-tools/blob/main/tools/outagedeck_status_tool.py)** for provider search, service health, active incidents, and incident timelines. It is read-only, needs no account or API key, and keeps source links in the result so answers can be checked.
 - **[A TRMNL e-ink dashboard](https://github.com/outagedeck/trmnl-plugin)** for watching up to eight cloud and SaaS providers on one screen. It is free, keyless, and renders unavailable feeds as unknown instead of falsely healthy.
 - **Copy-ready cloud-status dashboards for [Glance](https://github.com/glanceapp/glance/discussions/1057) and [Homepage](https://github.com/gethomepage/homepage/discussions/6935)** that show provider rollups, active incidents, service counts, and official-feed freshness. Both use the keyless public API, include safe refresh intervals, and can be customized by swapping provider slugs.
 - **[A JSON API](https://outagedeck.com/developers/api)** with an [OpenAPI 3.1 spec](https://outagedeck.com/api/v1/openapi), open CORS, and anonymous access allowed.
@@ -43,6 +44,16 @@ Add `&theme=light` or `&theme=dark` to pin the theme. Without it the wall follow
 ```
 
 Swap `aws` for any of the [172 tracked providers](https://outagedeck.com/providers). Badges are deliberately outside auth and rate limiting, so they can be hotlinked freely.
+
+### Prefer Shields.io?
+
+The same normalized provider status is now available as a standard Shields.io badge:
+
+```markdown
+[![GitHub status](https://img.shields.io/outagedeck/status/github)](https://outagedeck.com/providers/github)
+```
+
+Swap `github` for another provider slug. Shields.io caches the result for 10 minutes, matching OutageDeck's provider refresh interval.
 
 ## What we do not claim
 
