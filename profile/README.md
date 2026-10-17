@@ -1,5 +1,7 @@
 # OutageDeck
 
+[OutageDeck.com](https://outagedeck.com/) is the official product website for live cloud and SaaS status, outage timelines, and vendor-reported uptime history. Public status checks need no account. This GitHub organization publishes the open-source clients and integrations for the hosted service.
+
 **Is it you, or is it them?** Status from cloud and SaaS vendors, read from the official machine-readable feeds they publish about themselves, about every 10 minutes.
 
 [![Vendor-published status for AWS, Cloudflare, GitHub, OpenAI, Vercel and Google Cloud | OutageDeck](https://outagedeck.com/embed/wall.svg?p=aws,cloudflare,github,openai,vercel,google-cloud)](https://outagedeck.com/stack?p=aws,cloudflare,github,openai,vercel,google-cloud)
